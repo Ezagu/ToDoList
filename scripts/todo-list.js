@@ -1,4 +1,4 @@
-export const todoList = [{
+export const todoList = JSON.parse(localStorage.getItem('todo-list')) || [{
   checked: true,
   text: 'watch youtube'
 }, {
@@ -14,4 +14,8 @@ export function addTodo(text) {
     checked: false,
     text
   })
+}
+
+export function saveTodoList() {
+  localStorage.setItem('todo-list', JSON.stringify(todoList));
 }

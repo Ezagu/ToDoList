@@ -1,4 +1,4 @@
-import { todoList, addTodo } from "./todo-list.js";
+import { todoList, addTodo, saveTodoList } from "./todo-list.js";
 
 renderTodoList();
 
@@ -28,6 +28,7 @@ document.querySelector('.js-add-button')
     const text = document.querySelector('.js-text-input').value;
     if(!text || text.replaceAll(' ', '') === '') return;
     addTodo(text);
+    saveTodoList();
     renderTodoList();
     document.querySelector('.js-text-input').value = '';
   });
