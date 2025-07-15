@@ -1,4 +1,6 @@
-import { todoList } from "./todo-list.js";
+import { todoList, addTodo } from "./todo-list.js";
+
+renderTodoList();
 
 function renderTodoList() {
   let todoListHTML = '';
@@ -21,4 +23,11 @@ function renderTodoList() {
     .innerHTML = todoListHTML;
 }
 
-renderTodoList();
+document.querySelector('.js-add-button')
+  .addEventListener('click', () => {
+    const text = document.querySelector('.js-text-input').value;
+    if(!text || text.replaceAll(' ', '') === '') return;
+    addTodo(text);
+    renderTodoList();
+    document.querySelector('.js-text-input').value = '';
+  });

@@ -56,6 +56,7 @@ body {
   background-color: #20a5b6;
   color: #eefcfd;
   max-width: 70px;
+  cursor: pointer;
 }
 
 .task-list-container {
@@ -77,26 +78,22 @@ body {
   gap: 10px;
 }
 
-.todo-checkbox {
-  flex-grow: 1;
-  height: 20px;
-}
-
 .todo-text {
-  flex-grow: 8;
+  flex-grow: 1;
   font-size: 20px;
   color: #10313c;
   text-align: start;
+  overflow: hidden;
 }
 
 .update-todo-button,
 .remove-todo-button {
-  padding: 8px 3px;
+  padding: 10px;
   font-size: 15px;
-  flex-grow: 1;
   border: none;
   background-color: #eefcfd;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .footer-container {
@@ -104,8 +101,6 @@ body {
   display: flex;
   gap: 40px;
 }
-
-
 
 .progress-container {
   flex-grow: 2;
@@ -133,5 +128,6 @@ body {
   font-size: 20px;
   background-color: #20a5b6;
   color: #eefcfd;
+  cursor: pointer;
 }
 
