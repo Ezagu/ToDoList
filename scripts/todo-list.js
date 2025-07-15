@@ -19,3 +19,8 @@ export function addTodo(text) {
 export function saveTodoList() {
   localStorage.setItem('todo-list', JSON.stringify(todoList));
 }
+
+export function removeTodo(index) {
+  todoList.splice(index, 1);
+  saveTodoList();
+}

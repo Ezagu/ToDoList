@@ -1,11 +1,11 @@
-import { todoList, addTodo, saveTodoList } from "./todo-list.js";
+import { todoList, addTodo, saveTodoList, removeTodo } from "./todo-list.js";
 
 renderTodoList();
 
 function renderTodoList() {
   let todoListHTML = '';
 
-  todoList.forEach((todoItem) => {
+  todoList.forEach((todoItem, index) => {
     const text = todoItem.text;
     const isChecked = todoItem.checked;
     
@@ -14,13 +14,23 @@ function renderTodoList() {
         <input type="checkbox" class="todo-checkbox" ${isChecked ? 'checked': ''}>
         <p class="todo-text">${text}</p>
         <button class="update-todo-button">Update</button>
-        <button class="remove-todo-button">Remove</button>
+        <button class="remove-todo-button js-remove-todo-button" data-index="${index}">Remove</button>
       </div>
     `;
   }); 
 
   document.querySelector('.js-todo-list-container')
     .innerHTML = todoListHTML;
+
+  document.querySelectorAll('.js-remove-todo-button')
+    .forEach((element) => {
+      element.addEventListener('click', () => {
+        const index = element.dataset.index;
+        removeTodo(index);
+        renderTodoList();
+      });
+    });
+    
 }
 
 document.querySelector('.js-add-button')
