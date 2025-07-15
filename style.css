@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif, tahoma;
+  background-color: #7adde6;
+}
+
+.main {
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 #0003;
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  min-width: 500px;
+}
+
+.main-title {
+  padding-bottom: 20px;
+  font-size: 36px;
+  color: #10313c;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 10px;
+}
+
+.text-input {
+  font-family: 20px;
+  padding: 10px;
+  border: 2px solid #20a5b6;
+  flex-grow: 2;
+  font-size: 20px;
+}
+
+.date-input {
+  font-size: 20px;
+  border: none;
+  background-color: #20a5b6;
+  color: #eefcfd;
+  max-width: 160px;
+  padding-left: 10px;
+}
+
+.add-button {
+  flex-grow: 1;
+  font-size: 20px;
+  border: none;
+  background-color: #20a5b6;
+  color: #eefcfd;
+  max-width: 70px;
+}
+
+.task-list-container {
+  margin-top: 40px;
+}
+
+.task-list-title {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.todo-container {
+  background-color: #b0ecf1;
+  margin-bottom: 10px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.todo-checkbox {
+  flex-grow: 1;
+  height: 20px;
+}
+
+.todo-text {
+  flex-grow: 8;
+  font-size: 20px;
+  color: #10313c;
+  text-align: start;
+}
+
+.update-todo-button,
+.remove-todo-button {
+  padding: 8px 3px;
+  font-size: 15px;
+  flex-grow: 1;
+  border: none;
+  background-color: #eefcfd;
+  border-radius: 10px;
+}
+
+.footer-container {
+  padding-top: 20px;
+  display: flex;
+  gap: 40px;
+}
+
+
+
+.progress-container {
+  flex-grow: 2;
+  background-color: #eefcfd;
+  position: relative;
+}
+
+.progress-bar {
+  background-color: rgb(65, 196, 157);
+  height: 100%;
+  width: 0%;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #10313c;
+}
+
+.remove-checked-button {
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #20a5b6;
+  color: #eefcfd;
+}
+
