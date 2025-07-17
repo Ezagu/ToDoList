@@ -17,10 +17,10 @@ function renderTodoList() {
           ${text}
         </p>
         <button class="todo-button js-update-button" data-index=${index}>
-          Update
+          <img src="images/edit.svg" class="button-image">
         </button>
         <button class="todo-button js-remove-todo-button" data-index="${index}">
-          Remove
+          <img src="images/remove.svg" class="button-image">
         </button>
       </div>
     `;

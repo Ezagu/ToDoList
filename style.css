@@ -87,7 +87,7 @@ body {
 .todo-text {
   flex-grow: 1;
   font-size: 20px;
-  color: #10313c;
+  color: #000;
   text-align: start;
   overflow: hidden;
   cursor: pointer;
@@ -112,12 +112,22 @@ body {
 }
 
 .todo-button {
-  padding: 10px;
-  font-size: 15px;
-  border: none;
-  background-color: #eefcfd;
-  border-radius: 10px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+  box-shadow: 0 0 5px 0 transparent;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.todo-button:hover{
+  background-color: #20a5b633;
+}
+
+.button-image {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
 }
 
 .footer-container {
