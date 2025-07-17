@@ -1,4 +1,16 @@
-export const todoList = JSON.parse(localStorage.getItem('todo-list')) || []
+export const todoList = JSON.parse(localStorage.getItem('todo-list')) || [{
+  checked: false,
+  text: 'Watch a movie'
+}, {
+  checked: true,
+  text: 'Clean the house'
+},{
+  checked: true,
+  text: 'Buy groceries'
+},{
+  checked: false,
+  text: 'Learn Angular.js'
+}]
 
 export function addTodo(text) {
   todoList.unshift({
