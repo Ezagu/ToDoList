@@ -24,6 +24,10 @@ export function removeTodo(index) {
   todoList.splice(index, 1);
 }
 
+export function updateText(index, text) {
+  todoList[index].text = text;
+}
+
 export function removeChecked() {
   const todolistLength = todoList.length;
   todoList.slice().reverse().forEach((todoItem, index) => {

@@ -87,12 +87,26 @@ body {
   overflow: hidden;
 }
 
+.todo-input-update {
+  border: none;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+  border-bottom: 2px solid #10313c;
+  background-color: transparent;
+}
+
+.todo-input-update:focus {
+  outline: none;
+}
+
 .todo-done {
   text-decoration: line-through;
 }
 
 .update-todo-button,
-.remove-todo-button {
+.remove-todo-button,
+.save-todo-button {
   padding: 10px;
   font-size: 15px;
   border: none;
