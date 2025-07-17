@@ -13,7 +13,7 @@ body {
   margin: auto;
   margin-top: 40px;
   text-align: center;
-  background-color: #fff;
+  background-color: #eefcfd;
   box-shadow: 0 0 20px 0 #0003;
   padding: 40px;
   width: 100%;
@@ -29,7 +29,6 @@ body {
 
 .inputs-container {
   display: flex;
-  gap: 10px;
 }
 
 .text-input {
@@ -38,6 +37,12 @@ body {
   border: 2px solid #20a5b6;
   flex-grow: 2;
   font-size: 20px;
+  background-color: #eefcfd;
+}
+
+.text-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px 0 #20a5b6aa;
 }
 
 .date-input {
@@ -51,11 +56,11 @@ body {
 
 .add-button {
   flex-grow: 1;
-  font-size: 20px;
+  font-size: 30px;
   border: none;
   background-color: #20a5b6;
   color: #eefcfd;
-  max-width: 70px;
+  max-width: 45px;
   cursor: pointer;
 }
 
@@ -91,13 +96,12 @@ body {
 
 .todo-done {
   text-decoration: line-through;
-  color: rgb(33, 157, 120);
+  color: #20a5b6;
 }
 
 .todo-input-update {
   border: none;
   font-size: 20px;
-  padding: 5px;
   width: 100%;
   border-bottom: 2px solid #10313c;
   background-color: transparent;
@@ -107,9 +111,7 @@ body {
   outline: none;
 }
 
-.update-todo-button,
-.remove-todo-button,
-.save-todo-button {
+.todo-button {
   padding: 10px;
   font-size: 15px;
   border: none;
@@ -126,12 +128,12 @@ body {
 
 .progress-container {
   flex-grow: 2;
-  background-color: #eefcfd;
+  border: 1px solid #20a5b6;
   position: relative;
 }
 
 .progress-bar {
-  background-color: rgb(65, 196, 157);
+  background-color: #20a5b6;
   height: 100%;
   transition: width 0.7s;
 }

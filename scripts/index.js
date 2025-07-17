@@ -16,10 +16,10 @@ function renderTodoList() {
         <p class="todo-text js-todo-text ${isChecked ? 'todo-done': ''} js-todo-text-${index}" data-index="${index}">
           ${text}
         </p>
-        <button class="update-todo-button js-update-button" data-index=${index}>
+        <button class="todo-button js-update-button" data-index=${index}>
           Update
         </button>
-        <button class="remove-todo-button js-remove-todo-button" data-index="${index}">
+        <button class="todo-button js-remove-todo-button" data-index="${index}">
           Remove
         </button>
       </div>
@@ -90,7 +90,7 @@ function renderTodoList() {
 
         // Create the save button
         const saveElem = document.createElement('button');
-        saveElem.classList.add('save-todo-button');
+        saveElem.classList.add('todo-button');
         saveElem.innerText = 'Save';
         updateElem.parentElement.insertBefore(saveElem, updateElem.nextSibling);
 
