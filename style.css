@@ -85,6 +85,13 @@ body {
   color: #10313c;
   text-align: start;
   overflow: hidden;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.todo-done {
+  text-decoration: line-through;
+  color: rgb(33, 157, 120);
 }
 
 .todo-input-update {
@@ -98,10 +105,6 @@ body {
 
 .todo-input-update:focus {
   outline: none;
-}
-
-.todo-done {
-  text-decoration: line-through;
 }
 
 .update-todo-button,

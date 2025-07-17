@@ -13,8 +13,7 @@ function renderTodoList() {
     
     todoListHTML += `
       <div class="todo-container">
-        <input type="checkbox" class="todo-checkbox js-todo-checkbox" ${isChecked ? 'checked': ''} data-index="${index}">
-        <p class="todo-text ${isChecked ? 'todo-done': ''} js-todo-text-${index}">
+        <p class="todo-text js-todo-text ${isChecked ? 'todo-done': ''} js-todo-text-${index}" data-index="${index}">
           ${text}
         </p>
         <button class="update-todo-button js-update-button" data-index=${index}>
@@ -42,12 +41,13 @@ function renderTodoList() {
       });
     });
     
-  //Make interactive the checkbox
-  document.querySelectorAll('.js-todo-checkbox')
-    .forEach((element) => {
-      element.addEventListener('click', () => {
-        const index = element.dataset.index;
-        todoList[index].checked = element.checked;
+  //Make interactive the text of todo
+  document.querySelectorAll('.js-todo-text')
+    .forEach((textElem) => {
+      textElem.addEventListener('click', () => {
+        if (updating) return;
+        const index = textElem.dataset.index;
+        todoList[index].checked = !textElem.classList.contains('todo-done');
         saveTodoList();
         renderTodoList();
       });
