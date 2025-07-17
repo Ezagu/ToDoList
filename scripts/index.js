@@ -11,8 +11,8 @@ function renderTodoList() {
     
     todoListHTML += `
       <div class="todo-container">
-        <input type="checkbox" class="todo-checkbox" ${isChecked ? 'checked': ''}>
-        <p class="todo-text">${text}</p>
+        <input type="checkbox" class="todo-checkbox js-todo-checkbox" ${isChecked ? 'checked': ''} data-index="${index}">
+        <p class="todo-text ${isChecked ? 'todo-done': ''}">${text}</p>
         <button class="update-todo-button">Update</button>
         <button class="remove-todo-button js-remove-todo-button" data-index="${index}">Remove</button>
       </div>
@@ -31,6 +31,15 @@ function renderTodoList() {
       });
     });
     
+  document.querySelectorAll('.js-todo-checkbox')
+    .forEach((element) => {
+      element.addEventListener('click', () => {
+        const index = element.dataset.index;
+        todoList[index].checked = element.checked;
+        saveTodoList();
+        renderTodoList();
+      });
+    });
 }
 
 document.querySelector('.js-add-button')

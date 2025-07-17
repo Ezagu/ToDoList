@@ -93,6 +93,11 @@ body {
   color: #10313c;
   text-align: start;
   overflow: hidden;
+  
+}
+
+.todo-done {
+  text-decoration: line-through;
 }
 
 .update-todo-button,
