@@ -47,14 +47,11 @@ function renderTodoList() {
     });
 
   //progress bar
-  const progress = (quantityTodoChecked() / todoList.length) * 100;
-  console.log(progress);
-  document.querySelector('.js-progress-container')
-    .innerHTML = `
-      <div class="progress-bar" style="width: ${progress}%">
-        <p class="progress-text">${quantityTodoChecked()} of ${todoList.length} task completed</p>
-      </div>
-    `;
+  const progress = (quantityTodoChecked() / todoList.length) * 100 || 0;
+  document.querySelector('.js-progress-bar').style.width = `${progress}%`;
+  document.querySelector('.js-progress-text')
+    .innerHTML = `${quantityTodoChecked()} of ${todoList.length} task completed`;
+
 }
 
 //Make interactive the add button

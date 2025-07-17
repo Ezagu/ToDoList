@@ -125,7 +125,7 @@ body {
 .progress-bar {
   background-color: rgb(65, 196, 157);
   height: 100%;
-  width: 0%;
+  transition: width 0.7s;
 }
 
 .progress-text {
