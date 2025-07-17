@@ -40,4 +40,4 @@ This project showcases my skills in working with **DOM manipulation**, **objects
 
 **Agustín Ezequiel Calpe Monzón**  
 📧 [agustincalpedm@gmail.com](mailto:agustincalpedm@gmail.com)  
-🌐 [LinkedIn](https://www.linkedin.com/in/agust%C3%ADn-calpe-monz%C3%B3n-713275309/)
+🌐 [LinkedIn](https://www.linkedin.com/in/agustin-calpe/)
