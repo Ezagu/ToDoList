@@ -1,9 +1,11 @@
-import { todoList, addTodo, saveTodoList, removeTodo } from "./todo-list.js";
+import { todoList, addTodo, saveTodoList, removeTodo, removeChecked } from "./todo-list.js";
 
 renderTodoList();
 
 function renderTodoList() {
   let todoListHTML = '';
+
+  console.log(todoList);
 
   todoList.forEach((todoItem, index) => {
     const text = todoItem.text;
@@ -22,15 +24,18 @@ function renderTodoList() {
   document.querySelector('.js-todo-list-container')
     .innerHTML = todoListHTML;
 
+  // Make interactive the remove button
   document.querySelectorAll('.js-remove-todo-button')
     .forEach((element) => {
       element.addEventListener('click', () => {
         const index = element.dataset.index;
         removeTodo(index);
+        saveTodoList();
         renderTodoList();
       });
     });
     
+  //Make interactive the checkbox
   document.querySelectorAll('.js-todo-checkbox')
     .forEach((element) => {
       element.addEventListener('click', () => {
@@ -42,6 +47,7 @@ function renderTodoList() {
     });
 }
 
+//Make interactive the add button
 document.querySelector('.js-add-button')
   .addEventListener('click', () => {
     const text = document.querySelector('.js-text-input').value;
@@ -50,4 +56,12 @@ document.querySelector('.js-add-button')
     saveTodoList();
     renderTodoList();
     document.querySelector('.js-text-input').value = '';
+  });
+
+//Make interactive the remove checked button
+document.querySelector('.js-remove-checked-button').
+  addEventListener('click', () => {
+    removeChecked();
+    saveTodoList();
+    renderTodoList();
   });
