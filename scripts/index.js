@@ -1,4 +1,4 @@
-import { todoList, addTodo, saveTodoList, removeTodo, removeChecked } from "./todo-list.js";
+import { todoList, addTodo, saveTodoList, removeTodo, removeChecked, quantityTodoChecked } from "./todo-list.js";
 
 renderTodoList();
 
@@ -45,6 +45,16 @@ function renderTodoList() {
         renderTodoList();
       });
     });
+
+  //progress bar
+  const progress = (quantityTodoChecked() / todoList.length) * 100;
+  console.log(progress);
+  document.querySelector('.js-progress-container')
+    .innerHTML = `
+      <div class="progress-bar" style="width: ${progress}%">
+        <p class="progress-text">${quantityTodoChecked()} of ${todoList.length} task completed</p>
+      </div>
+    `;
 }
 
 //Make interactive the add button

@@ -33,3 +33,13 @@ export function removeChecked() {
     }
   });
 }
+
+export function quantityTodoChecked() {
+  let counter = 0;
+  todoList.forEach((todoItem) => {
+    if(todoItem.checked) {
+      counter++;
+    }
+  });
+  return counter;
+}
