@@ -80,18 +80,24 @@ body {
   display: flex;
   height: 50px;
   align-items: center;
-  padding: 10px;
-  gap: 10px;
+  padding-right: 10px;
+  gap: 5px;
 }
 
 .todo-text {
   flex-grow: 1;
   font-size: 20px;
   color: #000;
-  text-align: start;
   overflow: hidden;
   cursor: pointer;
-  padding-left: 5px;
+  padding-left: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.todo-text:has(input) {
+  text-decoration: none;
 }
 
 .todo-done {
@@ -105,6 +111,7 @@ body {
   width: 100%;
   border-bottom: 2px solid #10313c;
   background-color: transparent;
+  padding: 3px 0;
 }
 
 .todo-input-update:focus {
@@ -133,7 +140,7 @@ body {
 .footer-container {
   padding-top: 20px;
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .progress-container {

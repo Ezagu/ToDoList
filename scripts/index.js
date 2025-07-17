@@ -91,7 +91,7 @@ function renderTodoList() {
         // Create the save button
         const saveElem = document.createElement('button');
         saveElem.classList.add('todo-button');
-        saveElem.innerText = 'Save';
+        saveElem.innerHTML = '<img src="images/save.svg" class="button-image">';
         updateElem.parentElement.insertBefore(saveElem, updateElem.nextSibling);
 
         //Make interactive the save button
@@ -109,7 +109,7 @@ function renderTodoList() {
   const progress = (quantityTodoChecked() / todoList.length) * 100 || 0;
   document.querySelector('.js-progress-bar').style.width = `${progress}%`;
   document.querySelector('.js-progress-text')
-    .innerHTML = `${quantityTodoChecked()} of ${todoList.length} task completed`;
+    .innerHTML = `${quantityTodoChecked()} of ${todoList.length} tasks done`;
 }
 
 const textInputElem = document.querySelector('.js-text-input');
