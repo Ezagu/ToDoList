@@ -1,13 +1,4 @@
-export const todoList = JSON.parse(localStorage.getItem('todo-list')) || [{
-  checked: true,
-  text: 'watch youtube'
-}, {
-  checked: false,
-  text: 'go to the university'
-},{
-  checked: true,
-  text: 'play videogame'
-}]
+export const todoList = JSON.parse(localStorage.getItem('todo-list')) || []
 
 export function addTodo(text) {
   todoList.unshift({
