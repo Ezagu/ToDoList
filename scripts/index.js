@@ -54,15 +54,28 @@ function renderTodoList() {
 
 }
 
+const textInputElem = document.querySelector('.js-text-input');
+
+function submitTodo() {
+  const text = textInputElem.value;
+  if(!text || text.replaceAll(' ', '') === '') return;
+  addTodo(text);
+  saveTodoList();
+  renderTodoList();
+  textInputElem.value = '';
+}
+
 //Make interactive the add button
 document.querySelector('.js-add-button')
   .addEventListener('click', () => {
-    const text = document.querySelector('.js-text-input').value;
-    if(!text || text.replaceAll(' ', '') === '') return;
-    addTodo(text);
-    saveTodoList();
-    renderTodoList();
-    document.querySelector('.js-text-input').value = '';
+    submitTodo();
+  });
+
+// Add todo pressing enter on the text input
+textInputElem.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter') {
+      submitTodo();
+    }
   });
 
 //Make interactive the remove checked button
