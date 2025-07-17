@@ -59,16 +59,8 @@ body {
   cursor: pointer;
 }
 
-.task-list-container {
-  margin-top: 30px;
-}
-
-.task-list-title {
-  margin-bottom: 10px;
-  font-size: 30px;
-}
-
 .todo-list-container {
+  margin-top: 30px;
   max-height: 50vh;
   overflow: scroll;
 }
@@ -93,7 +85,6 @@ body {
   color: #10313c;
   text-align: start;
   overflow: hidden;
-  
 }
 
 .todo-done {
